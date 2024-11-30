@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+            // "dependsOn": "make_build",
+			"type": "cppbuild",
+			"label": "g++ build active file",
+			"command": "g++",
+			"args": [
+				"-fcolor-diagnostics",
+				"-fansi-escape-codes",
+				"-g",
+				"${file}",
+				"-o",
+				"../build/${fileBasenameNoExtension}",
+				"-std=c++20"
+			],
+			"options": {
+				"cwd": "~/Kigis-Disassembler"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/g++"
+		}
+	]
+}
